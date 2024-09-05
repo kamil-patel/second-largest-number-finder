@@ -6,10 +6,10 @@ describe("findSecondLargest", () => {
     });
 
     it("should handle arrays with duplicate numbers", () => {
-        expect(findSecondLargest([5, 5, 5, 5, 5])).toBe(5);
+        expect(() => findSecondLargest([5, 5, 5, 5, 5])).toThrow("Array elements are all the same");
     });
 
-    it("should return -Infinity for an empty array", () => {
+    it("should throw an error for an empty array", () => {
         expect(() => findSecondLargest([])).toThrow("Array must contain at least two numbers");
     });
 

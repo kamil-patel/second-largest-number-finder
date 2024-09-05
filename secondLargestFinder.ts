@@ -30,7 +30,7 @@ export function findSecondLargest(integerArray:number[]): number {
     // Handle the case where all elements are the same
     const uniqueNumbers = Array.from(new Set(integerArray));
     if (uniqueNumbers.length === 1) {
-        return uniqueNumbers[0];
+        throw new Error('Array elements are all the same');
     }
 
     // Initialize largest and secondLargest with negative infinity
@@ -48,11 +48,6 @@ export function findSecondLargest(integerArray:number[]): number {
             // Update secondLargest if we find a number between largest and secondLargest
             secondLargest = integerArray[i];
         }
-    }
-
-    // Check if we found a valid second largest number
-    if (secondLargest === -Infinity) {
-        throw new Error("Could not find a second largest number");
     }
 
     return secondLargest;
