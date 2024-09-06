@@ -1,35 +1,73 @@
-# Second Largest Number Finder
 
-This JavaScript function finds the second largest number in a given array of integers.
+## Second Largest Number Finder
 
-## Function: `findSecondLargest`
+This project helps to find the second-largest number in a given set of numbers using TypeScript.
 
-### Purpose
-To find the second largest number from a given array of integers.
+### Getting Started with Project Setup
 
-### Arguments
-- `integerArray` (Array of integers)
+The second-largest number finder is built in the following environment:
 
-### Return
-The second largest number in the array (Number)
+| Name  | Description                                                       | Version   | Required/Optional |
+|-------|-------------------------------------------------------------------|-----------|-------------------|
+| Node  | Node.js is used to run this project.                              | v20.17.0  | Required          |
+| NPM   | NPM is the package manager for Node.js                            | v10.8.3  | Required          |
 
-### Example
-```javascript
-Input: [6, 13, 22, 18, 0, 3, 45, 57, 5, 12]
-Output: 45
+---
+
+## Installation and Setup
+
+To run this project locally, follow these steps:
+
+1. **Clone the Repository**
+   ```bash
+   git clone GIT_HTTPS_URL -b BRANCH
+   ```
+   Clone the repository from the given Git URL and switch to the appropriate branch.
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+   Install all the modules and dependencies as defined in the `package.json` file.
+
+3. **Run the TypeScript Files**
+   Compile and execute the TypeScript file `secondLargestFinder.ts` using the following command:
+   ```bash
+   npx ts-node secondLargestFinder.ts
+   ```
+
+4. **Run Tests**
+   The project uses **Jest** for testing. To run the tests:
+   ```bash
+   npm test
+   ```
+
+   This will execute the test cases defined in `secondLargestFinder.test.ts`.
+
+---
+
+## Directory Structure
+
+```
+|-- second-largest-number-finder/
+    |-- .git/
+    |-- .gitignore
+    |-- jest.config.js
+    |-- LICENSE
+    |-- README.md
+    |-- node_modules/
+    |-- package-lock.json
+    |-- package.json
+    |-- secondLargestFinder.ts
+    |-- secondLargestFinder.test.ts
 ```
 
-## Usage
+---
 
-```javascript
-const integerArray = [6, 13, 22, 18, 0, 3, 45, 57, 5, 12];
-console.log("Second Largest Number is:", findSecondLargest(integerArray));
-```
+## Additional Notes
 
-## How it works
+- **Node Version**: Ensure you are using **Node.js v20.17.0** or above for compatibility.
+- **TypeScript**: This project is built using TypeScript, and you can run it using `ts-node` to avoid compiling the TypeScript files separately.
+- **Testing**: Test cases are included using **Jest**, and running `npm test` will execute them automatically.
 
-1. Initialize `largest` and `secondLargest` with negative infinity to handle arrays with negative numbers.
-2. Iterate through the array, updating `largest` and `secondLargest` as needed.
-3. If a new largest number is found, the old largest becomes the second largest.
-4. If a number is found that's between the current largest and second largest, it becomes the new second largest.
-5. Return the second largest number after iterating through the entire array.
+---
